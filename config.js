@@ -6,7 +6,7 @@
    2. Paste the Web App URL you get at the end below.
    ========================================================= */
 
-const SHEET_API_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbzpd_zeBRDHFsVQJcGpebrxj7rHKoesCZAntojW4ujsuubcuNWhWfTXgVA9BXLkbinv3A/exec";
 
 /* Optional: only allow saving entries for today or the past
    (turn off if you want him to be able to fill in old days too) */
