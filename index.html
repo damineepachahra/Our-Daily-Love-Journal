@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Daily Love Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Caveat:wght@500;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero-photo">
+    <img src="images/photo-3.jpg" alt="Us on the mountain" />
+    <div class="hero-photo-fade"></div>
+  </div>
+  <div class="hero-text">
+    <p class="eyebrow">a little book, kept just for us</p>
+    <h1>Our Daily<br><span>Love Journal</span></h1>
+    <p class="hero-sub">Pick a day. Tell me how it felt. That's all — I'll keep it forever.</p>
+    <a href="#calendar" class="scroll-cue">
+      <span>open today's page</span>
+      <svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 1V19M7 19L1 13M7 19L13 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- ================= INTRO NOTE ================= -->
+<section class="note-strip">
+  <img class="note-illustration" src="images/hero-illustration.jpg" alt="" aria-hidden="true">
+  <div class="note-copy">
+    <p class="script">Dear love,</p>
+    <p>every evening, click today's date, rate the day, and leave me a few honest words —
+    sweet, silly, tired, anything. I'm saving every single one.</p>
+    <p class="signoff">— D.</p>
+  </div>
+</section>
+
+<!-- ================= CALENDAR ================= -->
+<main id="calendar" class="calendar-section">
+  <div class="calendar-head">
+    <button id="prevMonth" class="month-nav" aria-label="Previous month">‹</button>
+    <h2 id="monthLabel">Month Year</h2>
+    <button id="nextMonth" class="month-nav" aria-label="Next month">›</button>
+  </div>
+
+  <div class="weekday-row">
+    <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+  </div>
+
+  <div id="calendarGrid" class="calendar-grid"></div>
+
+  <p class="calendar-legend"><span class="dot filled"></span> a page already written &nbsp; · &nbsp; <span class="dot today"></span> today</p>
+</main>
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery">
+  <h2 class="section-title">kept between these pages</h2>
+  <div class="gallery-strip">
+    <figure class="polaroid tilt-l">
+      <img src="images/photo-1.jpg" alt="Us under the tin roof">
+    </figure>
+    <figure class="polaroid tilt-r">
+      <img src="images/photo-3.jpg" alt="Us on the mountain with prayer flags">
+    </figure>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>made with love, one day at a time</p>
+</footer>
+
+<!-- ================= ENTRY MODAL ================= -->
+<div id="entryModal" class="modal-backdrop" aria-hidden="true">
+  <div class="envelope" id="envelope">
+    <div class="envelope-flap"></div>
+    <div class="entry-card" role="dialog" aria-modal="true" aria-labelledby="entryDateLabel">
+      <button id="closeModal" class="close-btn" aria-label="Close">×</button>
+      <p class="entry-eyebrow">today's page</p>
+      <h3 id="entryDateLabel">Month Day, Year</h3>
+
+      <div class="rating-block">
+        <p class="rating-label">how romantic was today?</p>
+        <div id="ratingHearts" class="rating-hearts">
+          <button class="heart-btn" data-value="1" aria-label="1 heart">♥</button>
+          <button class="heart-btn" data-value="2" aria-label="2 hearts">♥</button>
+          <button class="heart-btn" data-value="3" aria-label="3 hearts">♥</button>
+          <button class="heart-btn" data-value="4" aria-label="4 hearts">♥</button>
+          <button class="heart-btn" data-value="5" aria-label="5 hearts">♥</button>
+        </div>
+      </div>
+
+      <label class="message-label" for="messageBox">a few words for her</label>
+      <textarea id="messageBox" placeholder="Today I..." maxlength="1200"></textarea>
+
+      <div class="entry-actions">
+        <span id="saveStatus" class="save-status"></span>
+        <button id="saveEntry" class="save-btn">save this page</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
